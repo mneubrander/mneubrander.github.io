@@ -1,0 +1,54 @@
+# --- Basic Site Settings ---
+baseURL = "https://mneubrander.github.io/"
+languageCode = "en-us"
+title = "Marie Neubrander" # Or your full name
+theme = "hugo-apero"
+enableEmoji = true
+copyright = "© 2025 Marie Neubrander"
+
+# --- Main Menu Navigation ---
+# This creates the links in your site's header.
+[menu]
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 1
+  [[menu.main]]
+    name = "Projects"
+    url = "/project/"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+# --- Theme-specific Parameters ---
+# This section is where you customize the Apero theme itself.
+[params]
+  author = "Marie Neubrander"
+  description = "A personal website and blog." # A short description of your site
+
+  # --- Font Settings expected by hugo-apero ---
+  # Choose Tachyons font families or your own
+  textFontFamily = "sans-serif"
+  headingFontFamily = "sans-serif"
+  # If you want custom embedded fonts, set these to font names
+  customtextFontFamily = ""
+  customheadingFontFamily = ""
+  # Color theme
+  theme = "sky"
+    
+  # --- Social Media Links ---
+  # Add your username for each platform. The icon will appear automatically.
+  [[params.social]]
+    name = "GitHub"
+    icon = "github"
+    url = "https://github.com/mneubrander"
+  [[params.social]]
+    name = "Twitter"
+    icon = "twitter"
+    url = "https://twitter.com/YourTwitterHandle" # Replace with your Twitter/X handle
+  [[params.social]]
+    name = "LinkedIn"
+    icon = "linkedin"
+    url = "https://www.linkedin.com/in/YourLinkedIn/" # Replace with your LinkedIn URL

@@ -1,0 +1,14 @@
+# Hugo build output
+public/
+resources/
+
+# Hugo lock file
+.hugo_build.lock
+
+# Node/npm (if used by theme tooling)
+node_modules/
+
+# macOS
+.DS_Store
+
+
