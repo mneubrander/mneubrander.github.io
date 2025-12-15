@@ -1,0 +1,12 @@
+/* Round corners for the homepage hero image */
+.home .page-content img.mv0.w-70-m {
+  border-radius: 12px;
+}
+
+/* Make the homepage image smaller (tweak max-width as desired) */
+.home .page-content img.mv0.w-70-m {
+  width: auto !important;
+  max-width: 400px;
+}
+
+
