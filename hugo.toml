@@ -9,18 +9,26 @@ copyright = "© 2025 Marie Neubrander"
 # --- Main Menu Navigation ---
 # This creates the links in your site's header.
 [menu]
-  [[menu.main]]
-    name = "Blog"
-    url = "/blog/"
-    weight = 1
-  [[menu.main]]
-    name = "Projects"
-    url = "/project/"
-    weight = 2
-  [[menu.main]]
+  [[menu.header]]
     name = "About"
-    url = "/about/"
+    title = "About"
+    url = "/"
+    weight = 1
+  [[menu.header]]
+    name = "Research"
+    title = "Research"
+    url = "/research/"
+    weight = 2
+  [[menu.header]]
+    name = "Teaching"
+    title = "Teaching"
+    url = "/teaching/"
     weight = 3
+  [[menu.header]]
+    name = "Miscellaneous"
+    title = "Miscellaneous"
+    url = "/miscellaneous/"
+    weight = 4
 
 # --- Theme-specific Parameters ---
 # This section is where you customize the Apero theme itself.
@@ -33,22 +41,28 @@ copyright = "© 2025 Marie Neubrander"
   textFontFamily = "sans-serif"
   headingFontFamily = "sans-serif"
   # If you want custom embedded fonts, set these to font names
-  customtextFontFamily = ""
-  customheadingFontFamily = ""
+  customtextFontFamily = "Commissioner"
+  customheadingFontFamily = "Fraunces"
   # Color theme
   theme = "sky"
+  # Show social icons in site header and footer
+  socialInHeader = false
+  socialInFooter = true
+  # Header brand behavior
+  brandLabel = ""
+  hideBrandText = true
     
   # --- Social Media Links ---
-  # Add your username for each platform. The icon will appear automatically.
+  # Icons from Font Awesome: brand icons use icon_pack = "fab", solid uses "fas"
   [[params.social]]
-    name = "GitHub"
-    icon = "github"
-    url = "https://github.com/mneubrander"
+    icon      = "github"
+    icon_pack = "fab"
+    url       = "https://github.com/mneubrander"
   [[params.social]]
-    name = "Twitter"
-    icon = "twitter"
-    url = "https://twitter.com/YourTwitterHandle" # Replace with your Twitter/X handle
+    icon      = "linkedin"
+    icon_pack = "fab"
+    url       = "https://www.linkedin.com/in/marie-neubrander" # Replace with your LinkedIn URL
   [[params.social]]
-    name = "LinkedIn"
-    icon = "linkedin"
-    url = "https://www.linkedin.com/in/YourLinkedIn/" # Replace with your LinkedIn URL
+    icon      = "envelope"
+    icon_pack = "fas"
+    url       = "mailto:marie.neubrander@duke.edu" # Replace with your email address

@@ -1,15 +1,15 @@
 ---
-title: "Welcome"
-subtitle: "Building with Hugo Apéro"
-description: "A simple Hugo site using the Apéro theme."
+title: "Marie Neubrander"
+#subtitle: "Building with Hugo Apéro"
+description: "All about Marie - coming soon!:)"
 images:
-  - img/revoir.jpg
-image_left: true
-text_align_left: false
+  - img/headshot.jpg
+image_left: false
+text_align_left: true
 show_social_links: true
 show_action_link: true
 action_link: /about
-action_label: "Read More →"
+#action_label: "Read More →"
 action_type: text
 type: home
 ---
