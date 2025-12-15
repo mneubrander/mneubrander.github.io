@@ -27,11 +27,19 @@ jobs:
       - name: Setup Hugo
         uses: actions/setup-hugo@v4
         with:
-          hugo-version: latest
+          hugo-version: '0.149.1'
           extended: true
 
       - name: Build
         run: hugo --minify
+
+      - name: Verify build output
+        run: |
+          if [ ! -d "./public" ]; then
+            echo "Error: public directory not found after build"
+            exit 1
+          fi
+          echo "Build output verified: $(ls -la public | head -5)"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
