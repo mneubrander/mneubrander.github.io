@@ -1,6 +1,7 @@
 # Hugo build output
 public/
 resources/
+_site/
 
 # Hugo lock file
 .hugo_build.lock
