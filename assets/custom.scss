@@ -9,4 +9,19 @@
   max-width: 400px;
 }
 
+/* Faint line under navigation menu - spans full page width on all pages */
+.nav-bar {
+  height: 2px;
+  background-color: #a0a0a0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  opacity: 0.3;
+}
+
 
