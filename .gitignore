@@ -9,6 +9,9 @@ _site/
 # Node/npm (if used by theme tooling)
 node_modules/
 
+# reveal.js (not needed for Hugo site)
+reveal.js/
+
 # macOS
 .DS_Store
 
