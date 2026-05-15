@@ -6,6 +6,12 @@ theme = "hugo-apero"
 enableEmoji = true
 copyright = "© 2025 Marie Neubrander"
 
+# Allow raw HTML inside Markdown (needed for callouts, custom divs, etc.)
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 # --- Main Menu Navigation ---
 # This creates the links in your site's header.
 [menu]
