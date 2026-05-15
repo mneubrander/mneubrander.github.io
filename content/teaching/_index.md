@@ -3,6 +3,12 @@ title: "Teaching"
 description: "Teaching experience and mentorship."
 ---
 
+<div class="award-callout">
+  <span class="award-label">Award · 2024–2025</span>
+  <p class="award-title">PhD TA of the Year</p>
+  <p class="award-desc">Duke University Department of Statistical Science</p>
+</div>
+
 ## Instructor of Record
 
 - **STA 199**:  Intro to Data Science and Statistical Thinking, Duke University, Department of Statistical Science, Summer 2025

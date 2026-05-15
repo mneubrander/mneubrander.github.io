@@ -237,6 +237,35 @@ svg.anchor-symbol {
   display: none;
 }
 
+/* Award callout — used at the top of the teaching page */
+.award-callout {
+  background: rgba(232, 185, 76, 0.13);     /* soft yellow tint */
+  border-left: 5px solid $green;
+  padding: 1rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.5rem 0 2.5rem 0;
+}
+.award-callout .award-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: $green;
+  margin-bottom: 0.5rem;
+}
+.award-callout .award-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #2a2a2a;
+  margin: 0;
+}
+.award-callout .award-desc {
+  font-size: 0.95rem;
+  color: #5a5a5a;
+  margin: 0.2rem 0 0 0;
+}
+
 .teaching-content {
   font-size: 1.05rem;
 }
