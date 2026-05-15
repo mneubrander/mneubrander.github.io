@@ -4,10 +4,7 @@ description: |
   Personal website of Marie Neubrander
 show_header: false
 sidebar_left: true
-# Keep this! Do not edit.
 headless: false
-cascade:
-  headless: true
 ---
 
 ** index doesn't contain a body, just front matter above.

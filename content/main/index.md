@@ -1,5 +1,6 @@
 ---
 ## Configure page content in wide column
+headless: true
 title: "About Me" # leave blank to exclude
 number_featured: 0 # pulling from mainSections in config.toml
 use_featured: false # if false, use most recent by date

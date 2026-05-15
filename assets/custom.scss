@@ -1,18 +1,76 @@
-/* Round corners for the homepage hero image */
+/* ============================================================
+   Personal color palette overrides for hugo-apero "sky" theme.
+   Tweak the hex values below to iterate in the browser.
+
+   - Green  : headings, headlines, nav + sidebar links
+   - Pink   : body (inline) links, sidebar background tint
+   - Yellow : active nav underline + small heading accent
+   ============================================================ */
+
+$green:        #2d5f4a;
+$green-dark:   #1f3a30;
+$pink:         #c75d8c;
+$yellow:       #1f3a30;
+$pink-tint:    #f9f4f5;
+$pink-border:  #e8b94c;
+$site-bg:      #ffffff;
+
+/* --- Override the theme's generated color classes ---------- */
+
+.custom-heading-color,
+.custom-headline-color        { color: $green; }
+.custom-nav-link-color        { color: $green; }
+.custom-sidebar-link-color    { color: $green; }
+.custom-body-link-color       { color: $pink; }
+.custom-sidebar-text-color    { color: $green-dark; }
+
+.bg-custom-site-bg-color      { background-color: $site-bg; }
+.bg-custom-sidebar-bg-color   { background-color: $pink-tint; }
+.bg-custom-nav-bg-color       { background-color: $yellow; }
+.bg-custom-button-bg-color    { background-color: $green; }
+.hover-bg-custom-button-hover-bg-color:hover { background-color: $pink; }
+
+.b--custom-border-color       { border-color: $pink-border; }
+
+/* The theme applies the classes above via @extend, which freezes
+   selector lists at compile time. So we also target the underlying
+   elements directly to win the cascade. */
+
+body                          { background-color: $site-bg; }
+
+h1, h2, h3, h4, h5, h6        { color: $green; }
+.f-headline,    .f-subheadline,
+.f-headline-ns, .f-subheadline-ns,
+.f-headline-m,  .f-subheadline-m,
+.f-headline-l,  .f-subheadline-l { color: $green; }
+
+.site-links a,
+.site-brand,
+.page-main a.link             { color: $green; }
+.page-main a:not(.link)       { color: $pink; }
+
+.about-sidebar,
+.page-sidebar                 { background-color: $pink-tint; color: $green-dark; }
+.about-sidebar a:not(.link),
+.page-sidebar  a:not(.link)   { color: $green; }
+
+/* Active + hover nav underline */
+.site-links a:after,
+.site-links a.active:after    { background-color: $yellow; }
+
+/* --- Layout tweaks ----------------------------------------- */
+
+/* Round corners + size cap for the homepage hero image */
 .home .page-content img.mv0.w-70-m {
   border-radius: 12px;
-}
-
-/* Make the homepage image smaller (tweak max-width as desired) */
-.home .page-content img.mv0.w-70-m {
   width: auto !important;
   max-width: 400px;
 }
 
-/* Faint line under navigation menu - spans full page width on all pages */
+/* Faint divider line beneath the navigation, full-page-width */
 .nav-bar {
   height: 2px;
-  background-color: #a0a0a0;
+  background-color: $pink-border;
   width: 100vw;
   position: relative;
   left: 50%;
@@ -21,13 +79,206 @@
   margin-right: -50vw;
   margin-top: 1rem;
   margin-bottom: 0;
-  opacity: 0.3;
+  opacity: 0.7;
 }
 
-
-/* Make sidebar background a light color */
-.about-sidebar {
-  background-color: #f8f8f8 !important;
+/* Yellow underline accent on the main page heading ("About Me") */
+.about-main {
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  border-bottom: 3px solid $yellow;
 }
 
+/* --- Research page project cards --------------------------- */
 
+.research-intro {
+  margin-bottom: 2.5rem;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.project-section-heading {
+  margin-top: 3.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  color: $green;
+}
+
+.project-section-intro {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #555;
+}
+
+.project-section-divider {
+  border: 0;
+  height: 2px;
+  background-color: $green;
+  margin: 0.5rem 0 1.75rem 0;
+}
+
+.project-card {
+  display: flex;
+  gap: 1.5rem;
+  background: #ffffff;
+  border: 1px solid $pink-border;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.project-card:hover {
+  box-shadow: 0 6px 20px rgba(45, 95, 74, 0.08);
+  transform: translateY(-2px);
+}
+
+.project-card-thumb {
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.project-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .project-card { flex-direction: column; }
+  .project-card-thumb { width: 100%; height: 200px; }
+}
+
+/* Muted variant for prior research */
+.project-card--prior {
+  border-color: #d0d0d0;
+}
+.project-card--prior:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.project-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+.project-card-title {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  color: $green;
+  font-size: 1.4rem;
+}
+
+.project-status {
+  display: inline-block;
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $green-dark;
+  background: rgba(232, 185, 76, 0.25); /* soft yellow */
+  padding: 0.25rem 0.7rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  margin-top: 0.4rem;  /* nudge down to visually align with title text */
+}
+
+.project-collaborators {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #6b6b6b;
+  margin: 0.25rem 0 0.75rem 0;
+}
+
+.project-summary {
+  margin: 0.5rem 0 0 0;
+  line-height: 1.55;
+}
+
+.project-links {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.project-links li { margin: 0; }
+.project-links a {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.85rem;
+  border: 1px solid $pink;
+  border-radius: 4px;
+  color: $pink;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.project-links a:hover {
+  background: $pink;
+  color: #ffffff;
+}
+
+/* --- Teaching page ----------------------------------------- */
+
+/* Hide the auto-injected heading anchor icons (link chain glyphs) */
+svg.anchor-symbol {
+  display: none;
+}
+
+.teaching-content {
+  font-size: 1.05rem;
+}
+
+.teaching-content h2 {
+  color: $green;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Horizontal divider above every section heading except the first */
+.teaching-content h2:not(:first-of-type) {
+  border-top: 1px solid $pink;
+  padding-top: 2rem;
+  margin-top: 3rem;
+}
+
+/* Tighter, bullet-less course lists */
+.teaching-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 0 0;
+}
+.teaching-content ul li {
+  padding: 0.15rem 0;
+  line-height: 1.5;
+}
+
+/* Reset default paragraph margins inside list items (Markdown wraps
+   items in <p> when any item has a nested description) */
+.teaching-content li p {
+  margin: 0;
+}
+
+/* Second-and-later paragraphs inside a list item = course descriptions.
+   Indent them to roughly align with where the course name starts
+   (after "STA NNN: " ~= 9 characters wide). */
+.teaching-content li p + p {
+  padding-left: 9ch;
+  font-size: 0.95em;
+  color: #5a5a5a;
+  margin: 0.25rem 0 0.5rem 0;
+  line-height: 1.5;
+}

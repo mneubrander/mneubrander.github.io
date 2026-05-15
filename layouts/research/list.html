@@ -1,0 +1,36 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+  <section class="page-content mw8 center">
+
+    <h1 class="f2 f1-m f1-l fw5-ns mv4 lh-solid tracked-tight-ns">{{ .Title }}</h1>
+
+    {{ with .Content }}
+      <div class="research-intro f4 lh-copy">{{ . }}</div>
+    {{ end }}
+
+    {{/* Group projects by category. Anything without `category: "prior"` is treated as current. */}}
+    {{ $current := where .Pages "Params.category" "!=" "prior" }}
+    {{ $prior   := where .Pages "Params.category" "prior" }}
+
+    <div class="project-list">
+      {{ range $current.ByDate.Reverse }}
+        {{ partial "project-card.html" . }}
+      {{ end }}
+    </div>
+
+    {{ with $prior }}
+      <h2 class="project-section-heading">Prior Research</h2>
+      {{ with $.Params.prior_intro }}
+        <p class="project-section-intro">{{ . | markdownify }}</p>
+      {{ end }}
+      <hr class="project-section-divider">
+      <div class="project-list">
+        {{ range .ByDate.Reverse }}
+          {{ partial "project-card.html" . }}
+        {{ end }}
+      </div>
+    {{ end }}
+
+  </section>
+</main>
+{{ end }}

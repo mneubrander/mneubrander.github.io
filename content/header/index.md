@@ -1,5 +1,6 @@
 ---
 ## Configure header of page
+headless: true
 text_align_right: false
 show_title_as_headline: 
 headline: |

@@ -1,0 +1,36 @@
+{{/* Renders one project card. Expects a Page as its context.
+     Optional `image` front-matter param shows a thumbnail on the left.
+     Accepts an absolute URL (https://…), a site-relative path (/images/foo.jpg),
+     or a filename inside the page's bundle. */}}
+<article class="project-card{{ if eq .Params.category "prior" }} project-card--prior{{ end }}">
+
+  {{ with .Params.image }}
+    {{ $src := . }}
+    {{ if not (or (hasPrefix . "http") (hasPrefix . "/")) }}
+      {{ with $.Resources.GetMatch . }}
+        {{ $src = .RelPermalink }}
+      {{ end }}
+    {{ end }}
+    <img class="project-card-thumb" src="{{ $src }}" alt="">
+  {{ end }}
+
+  <div class="project-card-body">
+    <header class="project-card-header">
+      <h3 class="project-card-title">{{ .Title }}</h3>
+      {{ with .Params.status }}<span class="project-status">{{ . }}</span>{{ end }}
+    </header>
+    {{ with .Params.collaborators }}
+      <p class="project-collaborators">{{ . }}</p>
+    {{ end }}
+    {{ with .Params.summary }}
+      <p class="project-summary">{{ . | markdownify }}</p>
+    {{ end }}
+    {{ with .Params.links }}
+      <ul class="project-links">
+        {{ range . }}
+          <li><a href="{{ .url }}">{{ .name }}</a></li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
+</article>
