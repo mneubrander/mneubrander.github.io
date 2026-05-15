@@ -26,9 +26,10 @@ description: "Teaching experience and mentorship."
 
   More information coming soon!
 
-## Teaching Assistant at Duke
 
-Duke University, 2023 – present
+## Teaching Assistant 
+
+***Duke University, 2023 – present***
 
 - STA 199: Intro to Data Science and Statistical Thinking (Fall 2023, Fall 2024, Fall 2025), Head TA
 
@@ -36,10 +37,7 @@ Duke University, 2023 – present
 
   Role: Managed coordinating of ~20 TAs accross sections. Taught multiple lab sections (~30 student each), held office hours, and graded homeworks.
 
-
-## Teaching Assistant at the University of Alabama
-
-University of Alabama, 2018 - 2021
+***University of Alabama, 2018 - 2021***
 
 - CS 100: Computer Science 1 for Majors
 
@@ -52,3 +50,16 @@ University of Alabama, 2018 - 2021
   Course material: Introduces Python concepts for data collection and analysis.
 
   Role: Graded projects, homeworks, and exams. Held office hours.
+
+
+## Service & Outreach
+
+- Duke DataFest, Co-Coordinator (2026)
+
+  Coordinated judges and volunteers for a 2+ day data analysis competition with over 100 student participants ([more info here]((https://dukestatsci.github.io/datafest/))).
+
+- Science Olympiad, Volunteer (2026 – present)
+
+  Volunteered at the Durham Regional Competition and the NC State Tournament (both B/C divisions). Continuing in the 2027 season.
+
+
