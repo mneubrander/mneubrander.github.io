@@ -7,9 +7,9 @@ use_featured: false # if false, use most recent by date
 number_categories: 0 # set to zero to exclude
 show_intro: true
 intro: |
- I am currently a third year Ph.D. candidate in the Duke University Department of Statistical Science where I am advised by Dr. Alex Volfovsky. 
+ I'm currently a fourth year Ph.D. candidate and James B. Duke scholar in the Duke University Department of Statistical Science advised by Dr. Alex Volfovsky. 
 
- Broadly, I am interested in research at the intersection of causal inference and natural language processing with applications in the social sciences, and I conduct applied studies in the Duke Polarization Lab to better understand interactions on social networks.
+ I am broadly interested in research at the intersection of causal inference and natural language processing with applications in the social sciences. In addition to my methodological research, I conduct applied studies in the [Duke Polarization Lab](https://www.polarizationlab.com) to better understand interactions on social networks .
 
  Before being at Duke, I did my undergraduate degree in Math and Computer Science and the University of Alabama. I then spent a year in Kinmen, Taiwan as a Fulbright English Teaching Assistant. 
 
